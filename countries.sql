@@ -7,7 +7,7 @@ WHERE language = 'slovene'
 ORDER BY percentage DESC;
 
 /*2.	¿Qué consulta ejecutarías para mostrar el número total de ciudades para cada país? Su consulta debe devolver el nombre del país y el número total de ciudades. Tu consulta debe organizar el resultado por el número de ciudades en orden descendente*/
-SELECT c.name, count(ci.name) AS cities
+SELECT c.name, COUNT(ci.name) AS cities
 FROM cities AS ci
 JOIN countries AS c
 ON c.id=ci.country_id
